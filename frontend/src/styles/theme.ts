@@ -1,6 +1,6 @@
 const theme = {
   colors: {
-    withe: '#FFFFFF',
+    white: '#FFFFFF',
     background: '#FAF6FF',
     primary: '#00254d',
     secundary: '#54c5c1',
@@ -18,6 +18,9 @@ const theme = {
     h2: '24px',
     h3: '21px',
     span: '18px'
+  },
+  header: {
+    height: '75px'
   }
 }
 
