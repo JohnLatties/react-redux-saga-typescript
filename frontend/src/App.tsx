@@ -1,10 +1,13 @@
 import React from 'react'
+import StyleProvider from './styles'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Birdie</h1>
-    </div>
+    <StyleProvider>
+      <div className="App">
+        <h1>Birdie</h1>
+      </div>
+    </StyleProvider>
   )
 }
 
