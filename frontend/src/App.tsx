@@ -1,12 +1,14 @@
-import React from 'react'
+import Layout from './components/Layout'
 import StyleProvider from './styles'
 
 function App() {
   return (
     <StyleProvider>
-      <div className="App">
-        <h1>Birdie</h1>
-      </div>
+      <Layout>
+        <>
+          <h1>Birdie</h1>
+        </>
+      </Layout>
     </StyleProvider>
   )
 }
