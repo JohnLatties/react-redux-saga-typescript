@@ -26,7 +26,7 @@ html {
 
 body {
   background-color: ${(props) => props.theme.colors.background};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.white};
   font-family: 'Poppins', sans-serif;
   margin: 0;
 }
