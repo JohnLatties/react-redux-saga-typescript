@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: flex;
   flex: 0 0 auto;
   height: ${({ theme }) => theme.header.height};

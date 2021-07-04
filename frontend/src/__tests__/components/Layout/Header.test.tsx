@@ -9,8 +9,9 @@ describe('<Header/>', () => {
       `background-color: rgb(255, 255, 255)`
     )
     expect(container.firstChild).toMatchInlineSnapshot(`
-      <div
+      <header
         class="sc-bdnxRM khWsj"
+        role="header"
       >
         <div
           class="sc-gtsrHT ggMHFI"
@@ -24,7 +25,7 @@ describe('<Header/>', () => {
             class="sc-hKFxyN cDnlTy"
           />
         </div>
-      </div>
+      </header>
     `)
   })
 

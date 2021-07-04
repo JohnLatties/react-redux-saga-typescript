@@ -15,8 +15,9 @@ describe('<Layout/>', () => {
       <main
         class="sc-eCApnc iHOios"
       >
-        <div
+        <header
           class="sc-bdnxRM khWsj"
+          role="header"
         >
           <div
             class="sc-gtsrHT ggMHFI"
@@ -30,7 +31,7 @@ describe('<Layout/>', () => {
               class="sc-hKFxyN cDnlTy"
             />
           </div>
-        </div>
+        </header>
         <div
           class="sc-jSFjdj dXaepd"
         >
