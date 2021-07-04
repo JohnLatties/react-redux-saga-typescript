@@ -1,14 +1,10 @@
-import Layout from './components/Layout'
 import StyleProvider from './styles'
+import LoginView from './views/Login'
 
 function App() {
   return (
     <StyleProvider>
-      <Layout>
-        <>
-          <h1>Birdie</h1>
-        </>
-      </Layout>
+      <LoginView />
     </StyleProvider>
   )
 }

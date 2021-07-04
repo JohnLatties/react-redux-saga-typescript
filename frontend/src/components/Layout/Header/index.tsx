@@ -1,7 +1,7 @@
 import * as S from './styles'
 const Header = () => {
   return (
-    <S.Container>
+    <S.Container role="header">
       <S.Content>
         <S.Logo alt="Logo" src="/assets/images/logo.svg" />
         <S.Menu />
