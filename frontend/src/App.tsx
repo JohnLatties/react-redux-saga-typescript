@@ -1,10 +1,10 @@
 import StyleProvider from './styles'
-import LoginView from './views/Login'
+import ViewRouter from './views'
 
 function App() {
   return (
     <StyleProvider>
-      <LoginView />
+      <ViewRouter />
     </StyleProvider>
   )
 }
