@@ -15,7 +15,8 @@ describe('Care recipient sagas', () => {
       .hasFinalState({
         id: '',
         loading: false,
-        failed: true
+        failed: true,
+        isLogged: false
       })
       .run()
   })
@@ -28,7 +29,8 @@ describe('Care recipient sagas', () => {
       .hasFinalState({
         id: careRecipientId,
         loading: false,
-        failed: false
+        failed: false,
+        isLogged: true
       })
       .run()
   })

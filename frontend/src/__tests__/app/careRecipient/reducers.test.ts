@@ -2,6 +2,9 @@ import { initialState, actions } from '../../../app/careRecipient/reducers'
 import store from '../../../app/store'
 
 describe('Care recipient reducers', () => {
+  afterEach(() => {
+    store.dispatch(actions.removeCareRecipient())
+  })
   it('Should start with initial state', () => {
     const careRecipenteInitialState = store.getState().careRecipente
     expect(careRecipenteInitialState).toEqual(initialState)
@@ -18,12 +21,6 @@ describe('Care recipient reducers', () => {
   })
 
   it('Should handle setCareRecipient action', () => {
-    const careRecipenteInitialState = store.getState().careRecipente
-    expect(careRecipenteInitialState).toEqual({
-      ...initialState,
-      loading: true
-    })
-
     const careRecipenteId = '1233343423'
     store.dispatch(actions.setCareRecipient(careRecipenteId))
 
@@ -41,5 +38,18 @@ describe('Care recipient reducers', () => {
     const currentRecipenteInitialState = store.getState().careRecipente
     expect(currentRecipenteInitialState).toBeTruthy()
     expect(currentRecipenteInitialState.loading).toBeFalsy()
+  })
+
+  it('Should handle removeCareRecipient action', () => {
+    const careRecipenteId = '1233343423'
+    store.dispatch(actions.setCareRecipient(careRecipenteId))
+    const careRecipenteIdState = store.getState().careRecipente
+
+    expect(careRecipenteIdState.id).toBe(careRecipenteId)
+
+    store.dispatch(actions.removeCareRecipient())
+    const stateAfterRemoveAcion = store.getState().careRecipente
+
+    expect(stateAfterRemoveAcion).toEqual(initialState)
   })
 })

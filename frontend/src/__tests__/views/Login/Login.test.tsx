@@ -3,20 +3,12 @@ import userEvent from '@testing-library/user-event'
 import LoginView from '../../../views/Login'
 import { caraRecipient } from '../../utils/mocks'
 import { render } from '../../utils/Provider'
-
-function sleep(milisedunds = 200) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(true)
-    }, milisedunds)
-  })
-}
+import sleep from '../../utils/sleep'
 
 describe('Login view', () => {
   it('Should render <LoginView/> correctly', () => {
     render(<LoginView />)
 
-    expect(screen.getByRole('header')).toBeInTheDocument()
     expect(screen.getByText('Family Platform')).toBeInTheDocument()
     const form = screen.getByRole('form')
     expect(form).toBeInTheDocument()

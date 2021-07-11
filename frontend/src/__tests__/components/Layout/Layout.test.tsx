@@ -13,27 +13,27 @@ describe('<Layout/>', () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <main
-        class="sc-eCApnc iHOios"
+        class="sc-gKAaRy jdjPfJ"
       >
         <header
-          class="sc-bdnxRM khWsj"
+          class="sc-gtsrHT bcGMyW"
           role="header"
         >
           <div
-            class="sc-gtsrHT ggMHFI"
+            class="sc-dlnjwi NklDU"
           >
             <img
               alt="Logo"
-              class="sc-dlnjwi gHNWPx"
+              class="sc-hKFxyN bbMcYl"
               src="/assets/images/logo.svg"
             />
             <nav
-              class="sc-hKFxyN cDnlTy"
+              class="sc-eCApnc dbqiIu"
             />
           </div>
         </header>
         <div
-          class="sc-jSFjdj dXaepd"
+          class="sc-iCoGMd erovtZ"
         >
           <div>
             Content
