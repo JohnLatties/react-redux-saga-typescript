@@ -1,6 +1,8 @@
 import React from 'react'
 import { render, RenderOptions, RenderResult } from '@testing-library/react'
 import StyleProvider from '../../styles'
+import { Provider } from 'react-redux'
+import store from '../../app/store'
 
 interface ProviderProps {
   children: JSX.Element
@@ -8,9 +10,11 @@ interface ProviderProps {
 
 const AllTheProviders = ({ children }: ProviderProps) => {
   return (
-    <StyleProvider>
-      <>{children} </>
-    </StyleProvider>
+    <Provider store={store}>
+      <StyleProvider>
+        <>{children} </>
+      </StyleProvider>
+    </Provider>
   )
 }
 
