@@ -46,13 +46,13 @@ const Form = () => {
             onChange={handleInputChange}
           />
         </div>
-        <S.Button
+        <S.FormButton
           aria-label="Enter with Care recipient id"
           type="submit"
           disabled={!canSubmit}
         >
           {loading ? '...' : 'Enter'}
-        </S.Button>
+        </S.FormButton>
       </S.Form>
       <S.ErroArea>
         {failed && showError && (

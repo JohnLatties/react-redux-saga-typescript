@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '../../../components/Button'
 import { ThemeProps } from '../../../styles'
 
 export const Container = styled.div`
@@ -33,7 +34,7 @@ interface ButtonProps extends ThemeProps {
   disabled: boolean
 }
 
-export const Button = styled.button<ButtonProps>`
+export const FormButton = styled(Button)<ButtonProps>`
   border-radius: 6px;
   color: ${({ theme }) => theme.colors.white};
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2);

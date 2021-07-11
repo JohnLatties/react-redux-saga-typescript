@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '../../Button'
 
 export const Container = styled.header`
   display: flex;
@@ -27,4 +28,19 @@ export const Logo = styled.img`
 export const Menu = styled.nav`
   display: flex;
   width: 100px;
+`
+
+export const LogoutButton = styled(Button)`
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.white};
+
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 16px;
+
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.colors.secundary};
+    background-color: ${({ theme }) => theme.colors.primary};
+
+    color: ${({ theme }) => theme.colors.white};
+  }
 `
