@@ -6,7 +6,7 @@
   "author": "Jonathan Latties <johnlatties@gmail.com>",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/main/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify  src/main/index.ts",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "lint": "eslint src --max-warnings=0",
     "test": "jest --passWithNoTests --runInBand --no-cache --detectOpenHandles --coverage",
