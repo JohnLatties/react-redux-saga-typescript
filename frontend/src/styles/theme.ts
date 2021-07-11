@@ -4,7 +4,8 @@ const theme = {
     background: '#FAF6FF',
     primary: '#00254d',
     secundary: '#54c5c1',
-    accent: '#0459b4'
+    accent: '#0459b4',
+    danger: '#ff4136'
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],

@@ -57,3 +57,17 @@ export const Image = styled.img`
   max-width: 320px;
   width: 100%;
 `
+
+export const ErroArea = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  width: 100%;
+`
+
+export const ErroText = styled.span`
+  font-size: 18px;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.danger};
+`
