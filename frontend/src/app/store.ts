@@ -1,8 +1,25 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import {
+  configureStore,
+  ThunkAction,
+  Action,
+  getDefaultMiddleware
+} from '@reduxjs/toolkit'
+import createSagaMiddleware from 'redux-saga'
+import careRecipientReducer from './careRecipient/reducers'
+import rootSaga from './saga'
 
-export const store = configureStore({
-  reducer: {}
+const sagaMiddleware = createSagaMiddleware()
+
+const middlewares = [sagaMiddleware]
+const store = configureStore({
+  reducer: {
+    careRecipente: careRecipientReducer
+  },
+  middleware: [...getDefaultMiddleware({ thunk: false }), ...middlewares],
+  devTools: process.env.NODE_ENV !== 'production'
 })
+
+sagaMiddleware.run(rootSaga)
 
 export type AppDispatch = typeof store.dispatch
 export type RootState = ReturnType<typeof store.getState>
@@ -12,3 +29,5 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >
+
+export default store
