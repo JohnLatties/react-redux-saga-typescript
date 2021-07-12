@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "node backend/dist/main/index.js",
+    "build-frontend": "cd frontend && yarn && yarn build && cd ..", 
+    "build-backend": "cd backend && yarn && yarn build && cd ..",
+    "heroku-postbuild": "yarn build-frontend && yarn build-backend"
+  }
+}
