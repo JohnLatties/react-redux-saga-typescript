@@ -3,9 +3,9 @@
     "node": "12.14.1"
   },
   "scripts": {
-    "start": "cd backend && npm run dev",
-    "build-frontend": "cd frontend && npm install && npm run build && cd ..", 
-    "build-backend": "cd backend && npm install && npm run build && cd ..",
-    "heroku-postbuild": "npm run build-frontend && npm run build-backend"
+    "start": "cd backend && yarn dev",
+    "build-frontend": "cd frontend && yarn && yarn build && cd ..", 
+    "build-backend": "cd backend && yarn && yarn build && cd ..",
+    "heroku-postbuild": "npm install -g yarn && yarn build-frontend && yarn build-backend"
   }
 }
