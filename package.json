@@ -1,9 +1,9 @@
 {
   "engines": {
-    "node": "12.14.0"
+    "node": "12.14.1"
   },
   "scripts": {
-    "start": "node backend/dist/main/index.js",
+    "start": "cd backend && npm run dev",
     "build-frontend": "cd frontend && npm install && npm run build && cd ..", 
     "build-backend": "cd backend && npm install && npm run build && cd ..",
     "heroku-postbuild": "npm run build-frontend && npm run build-backend"
