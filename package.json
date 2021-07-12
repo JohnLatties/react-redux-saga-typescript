@@ -6,6 +6,6 @@
     "start": "cd backend && yarn dev",
     "build-frontend": "cd frontend && yarn && yarn build && cd ..", 
     "build-backend": "cd backend && yarn && yarn build && cd ..",
-    "heroku-postbuild": "npm install -g yarn && yarn build-backend && yarn build-frontend"
+    "heroku-postbuild": "npm install -g yarn && yarn build-backend"
   }
 }
