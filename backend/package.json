@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "author": "Jonathan Latties <johnlatties@gmail.com>",
+  "engines": {
+    "node": "12.14.0"
+  },
   "scripts": {
     "start": "node dist/main/index.js",
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify  src/main/index.ts",
