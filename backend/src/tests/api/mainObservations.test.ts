@@ -3,7 +3,7 @@ import app from '../../main/api'
 
 jest.mock('../../infra/data/repository/MainObservationRepository')
 
-describe.only('Main Observations Api', () => {
+describe('Main Observations Api', () => {
   it('Should return 404 if not found a care recipient by id', async (done) => {
     const careRecipientId = 'invalid'
     await request(app)

@@ -1,7 +1,7 @@
 import { act, fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import LoginView from '../../../views/Login'
-import { caraRecipient } from '../../utils/mocks'
+import { careRecipient } from '../../utils/mocks'
 import { render } from '../../utils/Provider'
 import sleep from '../../utils/sleep'
 
@@ -23,7 +23,7 @@ describe('Login view', () => {
     }) as HTMLInputElement
     const submitButton = utils.getByRole('button')
 
-    const value = caraRecipient.invalidId
+    const value = careRecipient.invalidId
     fireEvent.change(input, { target: { value } })
 
     await act(async () => {

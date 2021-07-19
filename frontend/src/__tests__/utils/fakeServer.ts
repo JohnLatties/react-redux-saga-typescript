@@ -1,16 +1,28 @@
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
-import { caraRecipient } from './mocks'
+import { careRecipient, mainObservations } from './mocks'
 
 const server = setupServer(
   rest.get(
-    `http://localhost/care-recipients/${caraRecipient.validId}`,
+    `http://localhost/care-recipients/${careRecipient.validId}`,
     async (req, res, ctx) => {
-      return res(ctx.status(200), ctx.json({ id: caraRecipient.validId }))
+      return res(ctx.status(200), ctx.json({ id: careRecipient.validId }))
     }
   ),
   rest.get(
-    `http://localhost/care-recipients/${caraRecipient.invalidId}`,
+    `http://localhost/care-recipients/${careRecipient.invalidId}`,
+    async (req, res, ctx) => {
+      return res(ctx.status(404), ctx.json('not found'))
+    }
+  ),
+  rest.get(
+    `http://localhost/care-recipients/${careRecipient.validId}/main-observations`,
+    async (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json({ ...mainObservations }))
+    }
+  ),
+  rest.get(
+    `http://localhost/care-recipients/${careRecipient.invalidId}/main-observations`,
     async (req, res, ctx) => {
       return res(ctx.status(404), ctx.json('not found'))
     }

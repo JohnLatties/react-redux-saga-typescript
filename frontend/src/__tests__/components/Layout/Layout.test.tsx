@@ -33,7 +33,7 @@ describe('<Layout/>', () => {
           </div>
         </header>
         <div
-          class="sc-iCoGMd erovtZ"
+          class="sc-iCoGMd cmrYjU"
         >
           <div>
             Content
