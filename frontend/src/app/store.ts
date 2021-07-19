@@ -6,6 +6,7 @@ import {
 } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
 import careRecipientReducer from './careRecipient/reducers'
+import mainObservationsReducer from './mainObservations/reducers'
 import rootSaga from './saga'
 
 const sagaMiddleware = createSagaMiddleware()
@@ -13,7 +14,8 @@ const sagaMiddleware = createSagaMiddleware()
 const middlewares = [sagaMiddleware]
 const store = configureStore({
   reducer: {
-    careRecipente: careRecipientReducer
+    careRecipente: careRecipientReducer,
+    mainObservations: mainObservationsReducer
   },
   middleware: [...getDefaultMiddleware({ thunk: false }), ...middlewares],
   devTools: process.env.NODE_ENV !== 'production'
