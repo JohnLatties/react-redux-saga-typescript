@@ -7,6 +7,8 @@ import {
 import createSagaMiddleware from 'redux-saga'
 import careRecipientReducer from './careRecipient/reducers'
 import mainObservationsReducer from './mainObservations/reducers'
+import moodRating from './moodRating/reducers'
+
 import rootSaga from './saga'
 
 const sagaMiddleware = createSagaMiddleware()
@@ -15,7 +17,8 @@ const middlewares = [sagaMiddleware]
 const store = configureStore({
   reducer: {
     careRecipente: careRecipientReducer,
-    mainObservations: mainObservationsReducer
+    mainObservations: mainObservationsReducer,
+    moodRating: moodRating
   },
   middleware: [...getDefaultMiddleware({ thunk: false }), ...middlewares],
   devTools: process.env.NODE_ENV !== 'production'
