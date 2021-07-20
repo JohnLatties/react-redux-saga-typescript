@@ -40,3 +40,9 @@ export const mainObservations = {
     total: 3
   }
 }
+
+export const moodEvents = [
+  { mood: 'happy', total: 1 },
+  { mood: 'okay', total: 1 },
+  { mood: 'sad', total: 1 }
+]
