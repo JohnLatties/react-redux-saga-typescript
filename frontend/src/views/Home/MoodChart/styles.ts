@@ -20,7 +20,3 @@ export const Content = styled.div`
     max-height: 350px;
   }
 `
-
-export const NoEvents = styled.h2`
-  color: ${({ theme }) => theme.colors.primary};
-`

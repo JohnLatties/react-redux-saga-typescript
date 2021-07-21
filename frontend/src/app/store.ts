@@ -8,6 +8,7 @@ import createSagaMiddleware from 'redux-saga'
 import careRecipientReducer from './careRecipient/reducers'
 import mainObservationsReducer from './mainObservations/reducers'
 import moodRating from './moodRating/reducers'
+import observationEvents from './observationEvents/reducers'
 
 import rootSaga from './saga'
 
@@ -18,7 +19,8 @@ const store = configureStore({
   reducer: {
     careRecipente: careRecipientReducer,
     mainObservations: mainObservationsReducer,
-    moodRating: moodRating
+    moodRating: moodRating,
+    observationEvents: observationEvents
   },
   middleware: [...getDefaultMiddleware({ thunk: false }), ...middlewares],
   devTools: process.env.NODE_ENV !== 'production'

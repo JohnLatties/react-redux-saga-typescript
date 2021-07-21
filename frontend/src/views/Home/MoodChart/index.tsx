@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { PolarArea } from 'react-chartjs-2'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import { getMoodEvents } from '../../../app/moodRating/actions'
+import NoEvents from '../../../components/NoEvents'
 import { Title } from '../../../components/Title'
 import * as S from './styles'
 
@@ -60,7 +61,7 @@ function MoodChart() {
         {chartData.labels.length && (
           <PolarArea role="canvas-chart" type="polarArea" data={chartData} />
         )}
-        {!chartData.labels.length && <S.NoEvents>No events</S.NoEvents>}
+        {!chartData.labels.length && <NoEvents>No events</NoEvents>}
       </S.Content>
     </S.Container>
   )
