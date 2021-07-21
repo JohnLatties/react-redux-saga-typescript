@@ -1,6 +1,11 @@
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
-import { careRecipient, mainObservations, moodEvents } from './mocks'
+import {
+  careRecipient,
+  lastConcern,
+  mainObservations,
+  moodEvents
+} from './mocks'
 
 const server = setupServer(
   rest.get(
@@ -35,6 +40,18 @@ const server = setupServer(
   ),
   rest.get(
     `http://localhost/care-recipients/${careRecipient.invalidId}/mood-events`,
+    async (req, res, ctx) => {
+      return res(ctx.status(404), ctx.json('not found'))
+    }
+  ),
+  rest.get(
+    `http://localhost/care-recipients/${careRecipient.validId}/last-concern`,
+    async (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json(lastConcern))
+    }
+  ),
+  rest.get(
+    `http://localhost/care-recipients/${careRecipient.invalidId}/last-concern`,
     async (req, res, ctx) => {
       return res(ctx.status(404), ctx.json('not found'))
     }

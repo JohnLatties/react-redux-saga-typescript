@@ -46,3 +46,11 @@ export const moodEvents = [
   { mood: 'okay', total: 1 },
   { mood: 'sad', total: 1 }
 ]
+
+export const lastConcern = {
+  id: '"831d90a5-1aed-40d3-9cef-a382653a0723"',
+  note: '"Safeguarding "',
+  severity: '"HIGH"',
+  timestamp: `${new Date('2019-05-03T09:48:58+01:00')}`,
+  care_recipient_id: 'e3e2bff8-d318-4760-beea-841a75f00227'
+}
