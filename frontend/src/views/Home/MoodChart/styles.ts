@@ -5,7 +5,15 @@ export const Container = styled.div`
   flex-direction: column;
   height: 48%;
   width: 100%;
+  min-height: 360px;
   padding: 16px;
+
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 8px;
+
+  @media (min-width: 768px) {
+    min-height: 380px;
+  }
 `
 
 export const Content = styled.div`
@@ -16,7 +24,7 @@ export const Content = styled.div`
   align-items: center;
 
   canvas {
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 320px;
+    max-height: 320px;
   }
 `

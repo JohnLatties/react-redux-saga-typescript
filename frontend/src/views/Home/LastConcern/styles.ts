@@ -4,12 +4,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 80px;
+  min-height: 150px;
   height: calc(20% - 10px);
   padding: 12px;
   margin-bottom: 12px;
-  background-color: white;
-  border-radius: 6px;
+
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 8px;
 
   @media (min-width: 768px) {
     height: calc(20% - 10px);

@@ -10,8 +10,11 @@ export const Container = styled.div`
   min-height: 360px;
   margin-bottom: 12px;
 
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 8px;
+
   @media (min-width: 768px) {
-    min-height: 420px;
+    min-height: 450px;
   }
 `
 
