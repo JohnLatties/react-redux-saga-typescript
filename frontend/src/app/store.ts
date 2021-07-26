@@ -5,6 +5,7 @@ import {
   getDefaultMiddleware
 } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
+import { SaveCareRecipient } from './careRecipient/localStorage'
 import careRecipientReducer from './careRecipient/reducers'
 import mainObservationsReducer from './mainObservations/reducers'
 import moodRating from './moodRating/reducers'
@@ -36,5 +37,9 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >
+
+store.subscribe(() => {
+  SaveCareRecipient(store.getState().careRecipente.id)
+})
 
 export default store

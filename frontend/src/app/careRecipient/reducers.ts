@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { CareRecipientState } from './models'
+import * as storage from './localStorage'
 
 export const initialState: CareRecipientState = {
   id: '',
@@ -18,10 +19,14 @@ const careRecipient = createSlice({
     setCareRecipient(state: CareRecipientState, action: PayloadAction<string>) {
       return { ...state, id: action.payload, loading: false, isLogged: true }
     },
+    hydrate(state: CareRecipientState, action: PayloadAction<string>) {
+      return { ...state, id: action.payload, isLogged: true }
+    },
     getCareRecipientFailure(state: CareRecipientState) {
       return { ...state, failed: true, loading: false }
     },
     removeCareRecipient() {
+      storage.RemoveCareRecipient()
       return { ...initialState }
     }
   }
@@ -33,7 +38,8 @@ export const {
   setCareRecipient,
   getCareRecipientFailure,
   requestCareRecipient,
-  removeCareRecipient
+  removeCareRecipient,
+  hydrate
 } = actions
 
 export default reducer

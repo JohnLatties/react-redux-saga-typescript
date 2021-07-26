@@ -2,8 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import App from './App'
+import { GetCareRecipient } from './app/careRecipient/localStorage'
+import { hydrate } from './app/careRecipient/reducers'
 import store from './app/store'
 import * as serviceWorker from './serviceWorker'
+
+const careRecipientLocal = GetCareRecipient()
+if (careRecipientLocal) store.dispatch(hydrate(careRecipientLocal))
 
 ReactDOM.render(
   <React.StrictMode>
