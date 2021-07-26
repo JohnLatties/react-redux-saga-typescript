@@ -7,7 +7,7 @@ const LoginView = () => {
     <S.Container>
       <S.Content>
         <Benefits />
-        <S.Title>Family Platform</S.Title>
+        <S.Title>Family app</S.Title>
         <Form />
       </S.Content>
     </S.Container>
