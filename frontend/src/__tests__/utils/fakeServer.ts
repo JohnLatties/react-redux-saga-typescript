@@ -2,6 +2,7 @@ import { rest } from 'msw'
 import { setupServer } from 'msw/node'
 import {
   careRecipient,
+  events,
   lastConcern,
   mainObservations,
   moodEvents
@@ -52,6 +53,18 @@ const server = setupServer(
   ),
   rest.get(
     `http://localhost/care-recipients/${careRecipient.invalidId}/last-concern`,
+    async (req, res, ctx) => {
+      return res(ctx.status(404), ctx.json('not found'))
+    }
+  ),
+  rest.get(
+    `http://localhost/care-recipients/${careRecipient.validId}/events`,
+    async (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json(events))
+    }
+  ),
+  rest.get(
+    `http://localhost/care-recipients/${careRecipient.invalidId}/events`,
     async (req, res, ctx) => {
       return res(ctx.status(404), ctx.json('not found'))
     }
