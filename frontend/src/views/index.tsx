@@ -9,6 +9,7 @@ import { useAppSelector } from '../app/hooks'
 import Layout from '../components/Layout'
 import HomeView from './Home'
 import LoginView from './Login'
+import TimeLineView from './TimeLine'
 
 function ViewRouter() {
   const isLogged = useAppSelector((state) => state.careRecipente.isLogged)
@@ -25,6 +26,9 @@ function ViewRouter() {
         <Switch>
           <PrivateRouter exact path="/">
             <HomeView />
+          </PrivateRouter>
+          <PrivateRouter exact path="/time-line">
+            <TimeLineView />
           </PrivateRouter>
           <PublicRouter exact path="/login">
             <LoginView />

@@ -9,7 +9,7 @@ describe('<ShortTimeLine/>', () => {
   it('Should render <ShortTimeLine/> correctly', async () => {
     store.dispatch(actions.setCareRecipient(careRecipient.validId))
     const utils = render(<ShortTimeLine />)
-    await sleep()
+    await sleep(400)
 
     expect(utils.getAllByRole('event-card').length).toBe(10)
     expect(utils.getByText('See all', { selector: 'button' }))
