@@ -7,11 +7,8 @@ import {
 } from 'react-router-dom'
 import { useAppSelector } from '../app/hooks'
 import Layout from '../components/Layout'
+import HomeView from './Home'
 import LoginView from './Login'
-
-function Home() {
-  return <h1>Home</h1>
-}
 
 function ViewRouter() {
   const isLogged = useAppSelector((state) => state.careRecipente.isLogged)
@@ -27,7 +24,7 @@ function ViewRouter() {
       <BrowserRouter>
         <Switch>
           <PrivateRouter exact path="/">
-            <Home />
+            <HomeView />
           </PrivateRouter>
           <PublicRouter exact path="/login">
             <LoginView />
