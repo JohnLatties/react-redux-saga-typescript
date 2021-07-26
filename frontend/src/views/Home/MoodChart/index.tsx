@@ -58,9 +58,7 @@ function MoodChart() {
     <S.Container>
       <Title>Mood rating</Title>
       <S.Content>
-        {chartData.labels.length && (
-          <PolarArea type="polarArea" data={chartData} />
-        )}
+        {chartData.labels.length && <PolarArea data={chartData} />}
         {!chartData.labels.length && <NoEvents>No events</NoEvents>}
       </S.Content>
     </S.Container>
